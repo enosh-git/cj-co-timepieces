@@ -1,69 +1,116 @@
-:root {
-  --gold: #FF9933;
-  --grey: #aab3b8;
-  --dark-blue: #0c1524;
-  --white: white;
-}
+  :root {
+    --gold: #FF9933;
+    --grey: #aab3b8;
+    --dark-blue: #0c1524;
+    --white: white;
+  }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-body {
-  background-color: var(--white);
-  color: black;
-  font-family: "Josefin Sans", sans-serif;
-}
+  body {
+    background-color: var(--white);
+    color: black;
+    font-family: "Josefin Sans", sans-serif;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", serif;
-}
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+  }
 
-header {
-  background: var(--dark-blue);
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  padding: 25px;
-}
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--dark-blue);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 25px;
+    transition: padding 0.3s ease;
+    gap: 80px;
+  }
 
-header nav ul {
-  list-style-type: none;
-  display: flex;
-  gap: 15px;
-  font-size: 15px;
-}
+  header.scrolled {
+    padding: 20px 25px;
+    transition: padding 0.3s ease
+  }
 
-header nav ul li a {
-  text-decoration: none;
-  color: var(--grey);
-  transition: color 0.5s ease;
-}
+  header.scrolled .headerLogo {
+    max-width: 60px;
+  }
 
-header nav ul li a:hover {
-  color: white;
-}
+  header.scrolled .headerLogo img {
+    width: 70px;
+    transition: width 0.3s ease;
+  }
 
-.headerLogo img {
-  width: 100px;
-  height: auto;
-  margin-left: 70px;
-}
+  header nav {
+    flex: 0 0 auto;
+  }
 
-.headerInput {
-  width: 350px;
-  background-color: transparent;
-  border: 1px solid var(--grey);  
-  border-radius: 8px;
-  padding: 13px;
-  outline: none;
-  color: white;
-  font-family: inherit;
-  margin-left: 110px;
-}
+  header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    font-size: 15px;
+  }
 
-.headerInput::placeholder {
-  color: var(--grey);
-}
+  header nav ul li a {
+    text-decoration: none;
+    color: var(--grey);
+    transition: color 0.3s ease;
+  }
+
+  header nav ul li a:hover {
+    color: white;
+  }
+
+  .headerLogo {
+    margin-left: 70px;
+    flex: 0 0 auto;
+    max-width: 150px;
+    overflow: hidden;
+    transition: max-width 0.3s ease; 
+  }
+
+  .headerLogo img {
+    width: 115px;
+    height: auto;
+    transition: width 0.3s ease;
+  }
+
+  .headerInput {
+    width: 400px;
+    background-color: transparent;
+    border: 1px solid var(--grey);  
+    border-radius: 8px;
+    padding: 13px;
+    outline: none;
+    color: white;
+    font-family: inherit;
+    flex: none;
+  }
+
+  .headerInput::placeholder {
+    color: var(--grey);
+  }
+
+  .headerSearchWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .headerLeft, .headerRight {
+    flex: 1;
+  }
+
+  .headerCenter {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
