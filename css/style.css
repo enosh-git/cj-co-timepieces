@@ -1,0 +1,21 @@
+:root {
+  --gold: #FF9933;
+  --grey: #F4F6F5;
+  --dark-blue: #2B3A67;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-blue);
+  color: var(--grey);
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+}
