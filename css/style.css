@@ -1,7 +1,8 @@
 :root {
   --gold: #FF9933;
-  --grey: #F4F6F5;
-  --dark-blue: #2B3A67;
+  --grey: #aab3b8;
+  --dark-blue: #0c1524;
+  --white: white;
 }
 
 * {
@@ -11,11 +12,58 @@
 }
 
 body {
-  background-color: var(--dark-blue);
-  color: var(--grey);
+  background-color: var(--white);
+  color: black;
   font-family: "Josefin Sans", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
+}
+
+header {
+  background: var(--dark-blue);
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 25px;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+  font-size: 15px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--grey);
+  transition: color 0.5s ease;
+}
+
+header nav ul li a:hover {
+  color: white;
+}
+
+.headerLogo img {
+  width: 100px;
+  height: auto;
+  margin-left: 70px;
+}
+
+.headerInput {
+  width: 350px;
+  background-color: transparent;
+  border: 1px solid var(--grey);  
+  border-radius: 8px;
+  padding: 13px;
+  outline: none;
+  color: white;
+  font-family: inherit;
+  margin-left: 110px;
+}
+
+.headerInput::placeholder {
+  color: var(--grey);
 }
