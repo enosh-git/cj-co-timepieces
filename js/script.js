@@ -10,3 +10,26 @@ document.addEventListener("scroll", function() {
         document.querySelector("header").classList.remove("scrolled");
     }
 })
+
+const filterButtons = document.querySelectorAll(".filterButton");
+
+const productCards = document.querySelectorAll(".productCard");
+
+filterButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+        productCards.forEach(function(card) {
+            if (button.dataset.brand == card.dataset.brand) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        })
+    })
+})
+
+productCards.forEach(function(card) {
+    if (card.dataset.brand != "casio") {
+        card.style.display = "none";
+    }
+})
+
