@@ -17,6 +17,13 @@ const productCards = document.querySelectorAll(".productCard");
 
 filterButtons.forEach(function(button) {
     button.addEventListener("click", function() {
+
+        filterButtons.forEach(function(btn) {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
         productCards.forEach(function(card) {
             if (button.dataset.brand == card.dataset.brand) {
                 card.style.display = "block";
@@ -33,3 +40,4 @@ productCards.forEach(function(card) {
     }
 })
 
+filterButtons[0].classList.add("active");
