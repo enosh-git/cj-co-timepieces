@@ -267,18 +267,27 @@
   .productHighlightsSection ul .filterButton.active {
     color: black;
     font-weight: bold;
-    transition: color 2s ease;
+    transition: color 0.3s ease;
   }
 
   .productHighlightsSection .productGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    padding-top: 10px;
   }
   
   .productHighlightsSection .productCard img {
-    width: 255px;
+    width: 100%;
     border-radius: 10px;
+    background-color: #f5f5f5;
+    transition: all 0.5s ease;
+  }
+
+  .productHighlightsSection .productCard img:hover {
+    transform: scale(1.03);
+    transition: all 0.5s ease;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
   }
   
   .productHighlightsSection .productCard h4 {
@@ -291,3 +300,147 @@
   .productHighlightsSection .productCard p {
     padding-top: 10px;
   }
+
+  /* footer Section */
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: flex-start;
+    background-color: var(--dark-blue);
+  }
+
+  .footerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 292px;
+    padding: 15px 40px 0px 40px;
+  }
+
+  .footerTop .footerCenter .footerAboutDescription {
+    padding-top: 16px;
+  }
+
+  .footerTop .footerRight {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footerTop .footerRight .footerSocialLinks {
+    white-space: nowrap;
+    padding-bottom: 10px;
+  }
+
+
+  .footerBottom {
+    text-align: left;
+    padding: 12px 858px 2px 50px;
+    border-top: 1px solid rgba(227, 227, 227, 0.1);
+  }
+
+  .footerBottom .footerCopyright {
+    font-size: 13px;
+  }
+
+  .footer .footerLeft img {
+    width: 50px;
+    height: auto;
+  }
+
+  .footer h3, .footer p {
+    color: white;
+  }
+
+  .footerLeft, .footerRight {
+    flex: 1;
+    display: flex;
+  }
+
+  .footerCenter {
+    align-content: center;
+  }
+
+  .footerRight .footerSocialLinksLists img {
+    width: 30px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* catalog-breadcrumb */
+  .breadcrumb {
+    background-color: rgba(227, 227, 227, 0.8);
+    border-radius: 10px;
+    margin: 30px 30px 0px 30px;
+  }
+
+  .breadcrumb ol {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    padding: 10px 20px;
+    margin-top: 40px;
+  }
+
+  .breadcrumb ol a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .breadcrumb ol .catalogBreadCrumbCollections {
+    color: rgba(0, 0, 0, 0.5)
+  }
+
+  .breadcrumb ol li {
+    list-style: none;
+  }
+
+  /* catalog-main */
+  .catalogMainContent {
+    margin: 15px 32px 32px 32px;
+  }
+
+  .catalogMainContent .catalogHeading {
+    padding-bottom: 15px;
+  }
+
+  .catalogCollections {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    max-width: 800px;
+  }
+
+  .collectionCard {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      flex: 1;
+      cursor: pointer;
+  }
+
+  .collectionCard img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+  }
+
+  .collectionCard:hover img {
+      transform: scale(1.05);
+  }
+
+  .collectionCardOverlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      color: white;
+  }
+
+  
