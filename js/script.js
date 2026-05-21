@@ -4,12 +4,24 @@ function switchImage(clickedThumbnail) {
 }
 
 document.addEventListener("scroll", function() {
-    if (window.scrollY >= 120) {
-        document.querySelector("header").classList.add("scrolled");
-    } else {
-        document.querySelector("header").classList.remove("scrolled");
+    const header = document.querySelector("header");
+    
+    // only run if header exists
+    if (header) {
+        if (window.scrollY >= 120) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
     }
-})
+
+    // parallax banners
+    const banners = document.querySelectorAll(".aboutUsBanner");
+    banners.forEach(function(banner) {
+        let scrolled = window.scrollY;
+        banner.style.backgroundPositionY = -(scrolled * 0.3) + "px";
+    });
+});
 
 const filterButtons = document.querySelectorAll(".filterButton");
 
@@ -34,10 +46,15 @@ filterButtons.forEach(function(button) {
     })
 })
 
-productCards.forEach(function(card) {
-    if (card.dataset.brand != "casio") {
-        card.style.display = "none";
-    }
-})
+if (productCards.length > 0) {
+    productCards.forEach(function(card) {
+        if (card.dataset.brand != "casio") {
+            card.style.display = "none";
+        }
+    })
+}
 
-filterButtons[0].classList.add("active");
+if (filterButtons.length > 0) {
+    filterButtons[0].classList.add("active");
+}
+
