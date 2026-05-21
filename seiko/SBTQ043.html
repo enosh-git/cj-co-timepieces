@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-
+    <link rel="icon" href="images/cjcoLogo.jpg" type="image/jpeg">
   </head>
 
   <body>
@@ -37,18 +37,20 @@
           <li class="breadcrumbSeparator">•</li>
           <li class="productBreadCrumb"><a href="../catalog.html">Catalog</a></li>
           <li class="breadcrumbSeparator">•</li>
-          <li class="productBreadCrumb">Seiko</li>
+          <li class="productBreadCrumb"><a href="../seiko.html">Seiko</a></li>
         </ol>
       </nav>
 
     <!-- Main Section -->
-     <main class="SBTQ043mainSection">
+     <main class="productPageMain">
       <div class="productImage">
         <div class="mainImage"><img id="mainImg" src="../images/SBTQ043-main.jpg" alt=""></div>
-        <div class="subImage1"><img id="subImg1" onclick="switchImage(this)" src="../images/SBTQ043-1.png" alt=""></div>
-        <div class="subImage2"><img id="subImg2" onclick="switchImage(this)" src="../images/SBTQ043-2.webp" alt=""></div>
-        <div class="subImage3"><img id="subImg3" onclick="switchImage(this)" src="../images/SBTQ043-3.webp" alt=""></div>
-        <div class="subImage4"><img id="subImg4" onclick="switchImage(this)" src="../images/SBTQ043-4.jpg" alt=""></div>
+        <div class="subImages">
+          <div class="subImage1"><img id="subImg1" onclick="switchImage(this)" src="../images/SBTQ043-main.jpg" alt=""></div>
+          <div class="subImage2"><img id="subImg2" onclick="switchImage(this)" src="../images/SBTQ043-2.webp" alt=""></div>
+          <div class="subImage3"><img id="subImg3" onclick="switchImage(this)" src="../images/SBTQ043-3.webp" alt=""></div>
+          <div class="subImage4"><img id="subImg4" onclick="switchImage(this)" src="../images/SBTQ043-4.jpg" alt=""></div>
+        </div>
       </div>
 
       <div class="productContent">
@@ -58,7 +60,20 @@
           <h4>Real-time stock update:</h4>
           <div><p class="availabilityText">AVAILABLE</p></div>
         </div>
-        <div class="productInfo"><p></p></div>
+        <div class="productInfo">
+          <ul>
+            <li>Model: SBTQ043 (Seiko Spirit/Selection)</li>
+            <li>Movement: Quartz (Seiko Caliber 7T92)</li>
+            <li>Case Material: Stainless Steel</li>
+            <li>Case Diameter: 38.5 mm (slim profile)</li>
+            <li>Case Thickness: 9.6 mm Dial</li>
+            <li>Color: Black with Gold accents</li>
+            <li>Crystal: Hardlex (Seiko’s mineral crystal)</li>
+            <li>Water Resistance: 100 meters (10 ATM)</li>
+            <li>Functions: Chronograph (1/20 sec, 12-hour total), Date display, Small Seconds, Tachymeter</li>
+            <li>Luminescence: Lumibrite on hands and indices Band: Stainless steel bracelet with a pressed clasp, 20mm lug width</li>
+          </ul>
+        </div>
       </div>
      </main>
 
@@ -66,7 +81,7 @@
     <!-- Footer section -->
      <footer class="footer">
       <div class="footerTop">
-        <div class="footerLeft"><img src="images/cjcoLogo.jpg" alt="CJ Co Timepieces"></div>
+        <div class="footerLeft"><img src="../images/cjcoLogo.jpg" alt="CJ Co Timepieces"></div>
         <div class="footerCenter">
           <h3 class="footerAboutTitle">About the shop</h3>
           <p class="footerAboutDescription">CJ Co Timepieces is a growing watch dealer in the Philippines.</p>
@@ -74,7 +89,7 @@
         <div class="footerRight">
           <h3 class="footerSocialLinks">Social Links</h3>
           <ul class="footerSocialLinksLists">
-            <li><a href="https://www.instagram.com/cjco.ph/"><img src="images/igLogo.jpg" alt="instagram Account"></a></li>
+            <li><a href="https://www.instagram.com/cjco.ph/"><img src="../images/igLogo.jpg" alt="instagram Account"></a></li>
           </ul>
         </div>
       </div>

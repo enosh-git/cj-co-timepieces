@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-
+    <link rel="icon" href="images/cjcoLogo.jpg" type="image/jpeg">
   </head>
 
   <body>
@@ -37,28 +37,37 @@
           <li class="breadcrumbSeparator">•</li>
           <li class="productBreadCrumb"><a href="../catalog.html">Catalog</a></li>
           <li class="breadcrumbSeparator">•</li>
-          <li class="productBreadCrumb">Casio</li>
+          <li class="productBreadCrumb"><a href="../casio.html">Casio</a></li>
         </ol>
       </nav>
 
     <!-- Main Section -->
-     <main class="MTP-1302DA-2A2VDFmainSection">
+     <main class="productPageMain">
       <div class="productImage">
         <div class="mainImage"><img id="mainImg" src="../images/MTP-1302DA-2A2VDF-main.jpg" alt=""></div>
-        <div class="subImage1"><img id="subImg1" onclick="switchImage(this)" src="../images/MTP-1302DA-2A2VDF-1.avif" alt=""></div>
-        <div class="subImage2"><img id="subImg2" onclick="switchImage(this)" src="../images/MTP-1302DA-2A2VDF-2.webp" alt=""></div>
-        <div class="subImage3"><img id="subImg3" onclick="switchImage(this)" src="../images/MTP-1302DA-2A2VDF-3.webp" alt=""></div>
-        <div class="subImage4"><img id="subImg4" onclick="switchImage(this)" src="../images/MTP-1302DA-2A2VDF-4.webp" alt=""></div>
+        <div class="subImages">
+          <div class="subImage1"><img id="subImg1" onclick="switchImage(this)" src="../images/MTP-1302DA-2A2VDF-main.jpg" alt=""></div>
+          <div class="subImage2"><img id="subImg2" onclick="switchImage(this)" src="../images/MTP-1302DA-2A2VDF-2.webp" alt=""></div>
+          <div class="subImage3"><img id="subImg3" onclick="switchImage(this)" src="../images/MTP-1302DA-2A2VDF-3.webp" alt=""></div>
+          <div class="subImage4"><img id="subImg4" onclick="switchImage(this)" src="../images/MTP-1302DA-2A2VDF-4.webp" alt=""></div>
+        </div>
+        
       </div>
 
       <div class="productContent">
         <div class="productName"><h2>Casio Datejust Ice Blue Dial MTP-1302DA-2A2VDF</h2></div>
-        <div class="productPrice"><p class="priceLabel">PRICE</p><h2>₱4,000</h2></div>
+        <div class="productPrice"><p class="priceLabel">PRICE</p><h2>₱4,000.00</h2></div>
         <div class="productAvailability">
           <h4>Real-time stock update:</h4>
           <div><p class="availabilityText">AVAILABLE</p></div>
         </div>
-        <div class="productInfo"><p></p></div>
+        <div class="productInfo">
+          <ul>
+            <li>Casio Datejust</li>
+            <li>Ref: MTP-1302DA-2A2VDF</li>
+            <li>Ice blue dial</li>
+          </ul>
+        </div>
       </div>
      </main>
 
@@ -66,7 +75,7 @@
     <!-- Footer section -->
      <footer class="footer">
       <div class="footerTop">
-        <div class="footerLeft"><img src="images/cjcoLogo.jpg" alt="CJ Co Timepieces"></div>
+        <div class="footerLeft"><img src="../images/cjcoLogo.jpg" alt="CJ Co Timepieces"></div>
         <div class="footerCenter">
           <h3 class="footerAboutTitle">About the shop</h3>
           <p class="footerAboutDescription">CJ Co Timepieces is a growing watch dealer in the Philippines.</p>
@@ -74,7 +83,7 @@
         <div class="footerRight">
           <h3 class="footerSocialLinks">Social Links</h3>
           <ul class="footerSocialLinksLists">
-            <li><a href="https://www.instagram.com/cjco.ph/"><img src="images/igLogo.jpg" alt="instagram Account"></a></li>
+            <li><a href="https://www.instagram.com/cjco.ph/"><img src="../images/igLogo.jpg" alt="instagram Account"></a></li>
           </ul>
         </div>
       </div>

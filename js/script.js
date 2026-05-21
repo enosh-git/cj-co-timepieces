@@ -1,6 +1,15 @@
 function switchImage(clickedThumbnail) {
+    // switch main image
     let mainImage = document.getElementById("mainImg");
     mainImage.src = clickedThumbnail.src;
+
+    // remove active from all thumbnails
+    document.querySelectorAll(".subImages img").forEach(function(img) {
+        img.classList.remove("active");
+    });
+
+    // add active to clicked thumbnail
+    clickedThumbnail.classList.add("active");
 }
 
 document.addEventListener("scroll", function() {
