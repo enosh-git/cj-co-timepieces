@@ -1,3 +1,12 @@
+const hamburger = document.getElementById('hamburger');
+const mainNav = document.getElementById('mainNav');
+
+if (hamburger) {
+    hamburger.addEventListener('click', function() {
+        mainNav.classList.toggle('active');
+    });
+}
+
 function switchImage(clickedThumbnail) {
     // switch main image
     let mainImage = document.getElementById("mainImg");
@@ -14,8 +23,6 @@ function switchImage(clickedThumbnail) {
 
 document.addEventListener("scroll", function() {
     const header = document.querySelector("header");
-    
-    // only run if header exists
     if (header) {
         if (window.scrollY >= 120) {
             header.classList.add("scrolled");
@@ -24,12 +31,14 @@ document.addEventListener("scroll", function() {
         }
     }
 
-    // parallax banners
-    const banners = document.querySelectorAll(".aboutUsBanner");
-    banners.forEach(function(banner) {
-        let scrolled = window.scrollY;
-        banner.style.backgroundPositionY = -(scrolled * 0.3) + "px";
-    });
+    // Only run parallax on desktop
+    if (window.innerWidth > 768) {
+        const banners = document.querySelectorAll(".aboutUsBanner");
+        banners.forEach(function(banner) {
+            let scrolled = window.scrollY;
+            banner.style.backgroundPositionY = -(scrolled * 0.3) + "px";
+        });
+    }
 });
 
 const filterButtons = document.querySelectorAll(".filterButton");
@@ -55,15 +64,15 @@ filterButtons.forEach(function(button) {
     })
 })
 
-if (productCards.length > 0) {
+// Only run filter on pages that have filter buttons
+if (productCards.length > 0 && filterButtons.length > 0) {
     productCards.forEach(function(card) {
         if (card.dataset.brand != "casio") {
             card.style.display = "none";
         }
     })
-}
 
-if (filterButtons.length > 0) {
-    filterButtons[0].classList.add("active");
+    if (filterButtons.length > 0) {
+        filterButtons[0].classList.add("active");
+    }
 }
-

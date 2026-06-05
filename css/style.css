@@ -801,3 +801,227 @@
     padding: 0px 10px 0px 25px;
     line-height: 1.4;
   }
+
+/* Hide hamburger on desktop by default */
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    body {
+          overflow-x: hidden;
+    }
+
+    header {
+        gap: 10px;
+        padding: 15px;
+        justify-content: space-between;
+    }
+
+    .headerLeft {
+        flex: 0 0 auto;
+    }
+
+    .headerCenter {
+        display: none;
+    }
+
+    .headerRight {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .headerLogo {
+        margin-left: 0;
+        max-width: 80px;
+    }
+
+    .headerLogo img {
+        width: 70px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+        header.scrolled {
+        padding: 15px; /* same as normal, no change */
+    }
+
+    header.scrolled .headerLogo {
+        max-width: 80px; /* same as normal */
+    }
+
+    header.scrolled .headerLogo img {
+        width: 70px; /* same as normal */
+    }
+
+     .hamburger {
+        display: block !important;
+        background: none;
+        border: none;
+        color: var(--grey);
+        font-size: 28px;
+        cursor: pointer;
+        z-index: 200;
+        position: relative;
+        margin-right: 20px;
+    }
+
+    /* Hide nav by default */
+    #mainNav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--dark-blue);
+        z-index: 150;
+        padding: 80px 30px 30px 30px;
+    }
+
+    /* Show nav when active */
+    #mainNav.active {
+        display: block;
+    }
+
+    #mainNav ul {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    #mainNav ul li a {
+        font-size: 20px;
+    }
+
+    /* Brand selection */
+    .brandSelection {
+        padding: 20px 20px 0px 20px;
+        gap: 50px;
+        justify-content: center;
+    }
+
+    .brandSelection::before,
+    .brandSelection::after {
+        display: none;
+    }
+
+    /* Hero section */
+    .heroSection {
+        height: 400px;
+        margin-top: 0;
+    }
+
+    .heroSection .heroContent h1 {
+        font-size: 22px;
+        top: 40px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .heroSection .heroContent p {
+        top: 100px;
+        padding: 0 20px;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    /* Product highlights */
+    .productHighlightsSection {
+        margin: 20px 15px;
+        padding: 10px;
+    }
+
+    .productHighlightsSection .productGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    /* Casio/Seiko catalog */
+    .casioCatalog .productGrid,
+    .seikoCatalog .productGrid {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 20px 15px;
+        gap: 15px;
+        row-gap: 20px;
+    }
+
+    /* Footer */
+    .footerTop {
+        flex-direction: column;
+        gap: 28px;
+        padding: 20px;
+    }
+
+    .footerBottom {
+        padding: 12px 20px;
+        text-align: center;
+    }
+
+    /* About us */
+    .aboutUsP1, .aboutUsP2, .aboutUsP3 {
+        padding: 15px 20px;
+    }
+
+    .aboutUsBanner {
+        height: 300px !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-attachment: scroll !important;
+    }
+
+    /* Contact page */
+    .contactMain {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .contactMain .contactRight {
+        margin-top: 0;
+    }
+
+    /* Catalog page */
+    .catalogCollections {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .catalogMainContent {
+        margin: 20px 15px;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+        margin: 15px;
+    }
+
+    .breadCrumbHead {
+        margin: 15px;
+    }
+
+    /* Product page */
+    .productPageMain {
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .mainImage img {
+        width: 100%;
+    }
+
+    .subImages img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .productContent .productAvailability .availabilityText {
+        padding: 8px 30px;
+    }
+
+}
